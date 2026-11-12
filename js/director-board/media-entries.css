@@ -1,0 +1,14 @@
+.zdb-picture-invitations { display: flex; gap: 8px; margin: 8px 0 14px; flex-wrap: wrap; }
+.zdb-picture-invitation { display: flex; flex: 1 1 180px; flex-direction: column; gap: 6px; padding: 12px; border: 1px solid var(--zdb-line, #e6dce3); border-radius: 10px; background: var(--zdb-panel, #fff); }
+.zdb-picture-invitation small { opacity: .65; }
+.zdb-picture-invitation .zdb-row { flex-wrap: wrap; }
+.zdb-slot-actions { flex-wrap: wrap; }
+@media (min-width: 1001px) {
+  .zdb-composer .zdb-media-input { flex-direction: row; gap: 8px; align-items: stretch; overflow-x: auto; overflow-y: auto; }
+  .zdb-composer .zdb-picture-invitations { flex: 0 0 auto; flex-wrap: nowrap; margin: 0; }
+  .zdb-composer .zdb-picture-invitation { flex: 0 0 120px; width: 120px; padding: 6px; gap: 3px; justify-content: center; }
+  .zdb-composer .zdb-picture-invitation > .zdb-muted { display: none; }
+  .zdb-composer .zdb-picture-invitation .zdb-row { gap: 4px; flex-wrap: nowrap; }
+  .zdb-composer .zdb-picture-invitation .zdb-btn { padding: 3px 4px; font-size: 11px; white-space: nowrap; }
+  .zdb-composer .zdb-media-input .zdb-media-slots { flex: 1 0 auto; min-width: max-content; overflow: visible; }
+}

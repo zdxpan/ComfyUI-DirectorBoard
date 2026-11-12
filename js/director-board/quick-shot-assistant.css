@@ -1,0 +1,15 @@
+.zdb-modal.zdb-quick-shot-assistant { position: fixed; inset: 50% auto auto 50%; transform: translate(-50%, -50%); box-sizing: border-box; width: min(760px, calc(100vw - 32px)); height: auto; max-height: 88vh; }
+.zdb-quick-shot-assistant .zdb-modalbody { display: flex; flex-direction: column; gap: 12px; min-height: 0; overflow-y: auto; }
+.zdb-quick-shot-assistant .zdb-modalbody > * { flex-shrink: 0; }
+.zdb-quick-shot-assistant .zdb-quick-modes { flex-wrap: wrap; }
+.zdb-quick-shot-assistant .zdb-quick-field { display: flex; flex-direction: column; gap: 6px; }
+.zdb-modal.zdb-quick-shot-assistant textarea { height: auto; box-sizing: border-box; width: 100%; resize: vertical; min-height: 64px; padding: 10px; font: inherit; color: inherit; border: 1px solid var(--zdb-border, #d9c9cf); border-radius: 8px; background: var(--zdb-card, #fff); }
+.zdb-quick-shot-assistant pre { white-space: pre-wrap; overflow-wrap: anywhere; font: inherit; line-height: 1.65; }
+.zdb-quick-shot-assistant .zdb-quick-result:empty { display: none; }
+.zdb-quick-shot-assistant .zdb-quick-result { border-top: 1px solid var(--zdb-border, #d9c9cf); padding-top: 10px; }
+.zdb-quick-shot-assistant .zdb-quick-frame { display: flex; align-items: flex-start; gap: 8px; padding: 8px 0; }
+.zdb-quick-shot-assistant .zdb-quick-frame p { margin: 4px 0; white-space: pre-wrap; }
+
+.zdb-modal.zdb-quick-shot-assistant textarea.zdb-quick-draft { height: 104px; min-height: 80px; }
+.zdb-modal.zdb-quick-shot-assistant textarea.zdb-quick-instruction { height: 72px; min-height: 64px; }
+.zdb-quick-shot-assistant .zdb-quick-picture { display: flex; flex-direction: column; gap: 10px; margin: 10px 0; padding: 12px; border: 1px solid var(--zdb-border, #d9c9cf); border-radius: 10px; background: var(--zdb-card, #fff); }

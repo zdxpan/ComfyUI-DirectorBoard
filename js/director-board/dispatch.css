@@ -1,0 +1,137 @@
+/* Dispatch panel styles for Director Board */
+
+/* --- Button bar (bottom toolbar) --- */
+.zdb-dispatch-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-top: 1px solid var(--zdb-line, #303d4b);
+  background: var(--zdb-panel, #1b2531);
+}
+.zdb-dispatch-bar .zdb-btn { flex: 0 0 auto; }
+.zdb-dispatch-bar .zdb-btn-danger { background: var(--zdb-danger, #572b32); border-color: var(--zdb-danger-border, #98535b); }
+
+/* Status text */
+.zdb-dispatch-status {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 11px;
+  color: var(--zdb-muted, #9aacbe);
+}
+.zdb-dispatch-status.zdb-status-error { color: #c75a6a; }
+.zdb-dispatch-status.zdb-status-ok    { color: #4d9a6e; }
+
+/* --- Progress indicator --- */
+.zdb-dispatch-progress {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;
+}
+.zdb-dispatch-progress-bar {
+  width: 80px;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--zdb-panel-strong, #f9e2ea);
+  overflow: hidden;
+}
+.zdb-dispatch-progress-fill {
+  height: 100%;
+  border-radius: 3px;
+  background: var(--zdb-primary, #d75f8c);
+  transition: width 0.3s ease;
+}
+.zdb-dispatch-progress-text {
+  font-size: 10px;
+  color: var(--zdb-muted, #9aacbe);
+  white-space: nowrap;
+}
+
+/* --- Parameter modal --- */
+.zdb-dispatch-params-modal {
+  display: grid;
+  gap: 8px;
+}
+
+/* Shot tabs list */
+.zdb-dispatch-tabs {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+.zdb-dispatch-tabs .zdb-btn {
+  flex: 0 0 auto;
+  padding: 4px 8px;
+  font-size: 11px;
+}
+
+/* Parameter grid */
+.zdb-dispatch-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.zdb-dispatch-grid .zdb-field {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+  color: var(--zdb-muted, #afbfce);
+  font-size: 11px;
+}
+.zdb-dispatch-grid .zdb-field input,
+.zdb-dispatch-grid .zdb-field select {
+  width: 100%;
+  min-width: 0;
+  padding: 6px;
+  border: 1px solid var(--zdb-line, #4b5c70);
+  border-radius: 5px;
+  background: #fff;
+  color: var(--zdb-text, #563d47);
+  font: inherit;
+}
+.zdb-dispatch-grid .zdb-field input:focus,
+.zdb-dispatch-grid .zdb-field select:focus {
+  border-color: var(--zdb-primary, #c98da0);
+  box-shadow: 0 0 0 1px rgba(201, 141, 160, 0.25);
+  outline: none;
+}
+
+/* Seed checkbox row */
+.zdb-dispatch-grid .zdb-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .zdb-dispatch-bar {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  .zdb-dispatch-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Loading spinner --- */
+.zdb-dispatch-spinner {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--zdb-line, #d9aebe);
+  border-top-color: var(--zdb-primary, #d75f8c);
+  border-radius: 50%;
+  animation: zdb-spin 0.6s linear infinite;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+@keyframes zdb-spin {
+  to { transform: rotate(360deg); }
+}
